@@ -106,7 +106,7 @@ pre {
     tab-size: 4;
 }
 
-.code-area::after {
+.code .code-area::after {
     content: " ";
     position: absolute;
     border-radius: 50%;
@@ -1952,7 +1952,7 @@ footer .copy-right {
 }
 
 .img-shadow {
-    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2), 0 10px 30px -11px rgba(0, 0, 0, .6)
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2), 0 10px 10px -14px rgba(0, 0, 0, .56)
 }
 
 .img-margin {
