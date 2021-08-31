@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="express项目, 采采其芹">
+    <meta name="keywords" content="vue代码规范, 采采其芹">
     <meta name="description" content="未来很明朗，好运在路上">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>express项目 | 采采其芹</title>
+    <title>vue代码规范 | 采采其芹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">express项目</h1>
+                    <h1 class="description center-align post-title">vue代码规范</h1>
                 </div>
             </div>
         </div>
@@ -390,16 +390,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/node/">
-                                <span class="chip bg-color">node</span>
+                            <a href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+                                <span class="chip bg-color">代码规范</span>
                             </a>
                         
-                            <a href="/tags/mongodb/">
-                                <span class="chip bg-color">mongodb</span>
-                            </a>
-                        
-                            <a href="/tags/express/">
-                                <span class="chip bg-color">express</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -410,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" class="post-category">
+                                代码规范
                             </a>
                         
                     </div>
@@ -423,14 +419,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-20
+                    2021-08-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-20
+                    2021-08-31
                 </div>
                 
 
@@ -454,31 +450,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="experss项目"><a href="#experss项目" class="headerlink" title="experss项目"></a>experss项目</h3><h4 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h4><ol>
-<li>express安装成功,创建一个文件，命令行输入：express 项目名</li>
-<li>cd到项目中，npm install</li>
-<li>node app.js，启动项目</li>
-<li>在浏览器输入<a target="_blank" rel="noopener" href="http://localhost:3000/%EF%BC%8C%E7%9C%8B%E5%88%B0express%E7%9A%84%E7%95%8C%E9%9D%A2">http://localhost:3000/，看到express的界面</a></li>
-<li>npm start 启动<img src="/medias/articImg/30.png" width="50%">
-<img src="/medias/articImg/31.png" width="50%"></li>
+                <h4 id="目录，文件，组件命名"><a href="#目录，文件，组件命名" class="headerlink" title="目录，文件，组件命名"></a>目录，文件，组件命名</h4><ol>
+<li>目录统一使用短横线连接方式命名；</li>
+<li>views下的js使用帕斯卡方式命名，其他资源文件统一使用短横线连接方式命名；</li>
+<li>组件文件除index外使帕斯卡命名，始终是多个单词，因为引入组件时，组件的变量通常用PascalCase格式，以区别于一般变量。组件文件名与变量名一致，方便对应；</li>
+<li>组件使用遵循短横线约定，在页面中使用需要前后闭合；</li>
 </ol>
-<h4 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h4><ol>
-<li><p>项目目录</p>
-<img src="/medias/articImg/32.png" width="50%"></li>
-<li><p>package.json</p>
-</li>
+<h4 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h4><ol>
+<li>顺序：template&nbsp;-&gt;&nbsp;script&nbsp;-&gt;&nbsp;style。一个组件尽量不要超过200行，页面包含独立部分时尽量分离成子组件。页面应该由各个小组件组成；</li>
+<li>组件/示例的选项顺序:<br>①　name(全局引用)<br>②　components(模板依赖)<br>③　directives(自定义指令)<br>④　filters(过滤器)<br>⑤　mixins(组合)<br>⑥　props(接受到父组件的对象)<br>⑦　data(本地状态属性)<br>⑧　computed(计算)<br>⑨　watch(监听)<br>⑩　created(生命周期)<br>⑪　mounted<br>⑫　methods(方法)</li>
+<li>router path采用短横线连接格式，其他方式会被当成一个单词搜索引擎无法区分语义</li>
+<li>router name采用帕斯卡方式命名；</li>
+<li>注册组件采用帕斯卡方式命名；</li>
+<li>props在父组件使用短横线连接方式命名，接收时使用驼峰命名；prop定义时应该尽量详细，类型，默认值，校验类型</li>
+<li>methods使用驼峰命名，操作函数动词+名词，请求数据get+**+data,尽量使用常用单词开头（set、get、go、can、has、is）</li>
+<li>元素上多个属性时一个属性换一行</li>
+<li>原生属性放前面，指令放后面，指令一律缩写</li>
+<li>v-for必须加上key属性，key需要唯一，添加key可提高性能</li>
+<li>避免v-if和v-for同时用在统一元素上（性能问题）</li>
 </ol>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "name": "kongjian",</span><br><span class="line">  "version": "1.0.0",</span><br><span class="line">  "description": "",</span><br><span class="line">  "main": "app.js",</span><br><span class="line">  "scripts": {</span><br><span class="line">    "start": "node app.js"</span><br><span class="line">  },</span><br><span class="line">  "author": "",</span><br><span class="line">  "license": "ISC",</span><br><span class="line">  "dependencies": {</span><br><span class="line">    "ejs": "^2.5.6",</span><br><span class="line">    "express": "^4.15.3",</span><br><span class="line">    "express-session": "^1.15.3",</span><br><span class="line">    "formidable": "^1.1.1",</span><br><span class="line">    "fs": "^0.0.1-security",</span><br><span class="line">    "mongodb": "^2.2.29",</span><br><span class="line">    "silly-datetime": "^0.1.2"</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
-<ol start="3">
-<li>app.js</li>
-</ol>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var express = require("express");</span><br><span class="line">var session = require('express-session');</span><br><span class="line">var route = require("./controller");</span><br><span class="line"></span><br><span class="line">var app = express();</span><br><span class="line">var fs = require("fs");</span><br><span class="line">app.use(session({</span><br><span class="line">    secret: 'keyboard cat',</span><br><span class="line">    resave: false,</span><br><span class="line">    saveUninitialized: true</span><br><span class="line">}))</span><br><span class="line"></span><br><span class="line">app.set("view engine","ejs");</span><br><span class="line">app.use(express.static("./public"));</span><br><span class="line">app.use(express.static("./upload"));</span><br><span class="line">app.use(express.static("./tx"));</span><br><span class="line">//路由</span><br><span class="line">app.get("/",route.showIndex);</span><br><span class="line">app.get("/dirpho",route.showxiangce);</span><br><span class="line">app.post("/dshuo",route.doShuo);</span><br><span class="line">//端口</span><br><span class="line">app.listen(4500);</span><br></pre></td></tr></tbody></table></figure>
-<ol start="4">
-<li>连接数据库，<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var MongoClient=require("mongodb").MongoClient; //需要npm install mongodb</span><br><span class="line">var dbUrl = require("./setUrl.js");//数据库地址</span><br><span class="line">var url = dbUrl.url;</span><br><span class="line">//数据库连接方法</span><br><span class="line">function collectdb(callback) {</span><br><span class="line">    MongoClient.connect(url, function (err, db) {</span><br><span class="line">        if (err) {</span><br><span class="line">            callback(err, null);</span><br><span class="line">            return;</span><br><span class="line">        }</span><br><span class="line">        callback(null, db)</span><br><span class="line">    })</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure></li>
-<li>查询数据库</li>
-</ol>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">collectdb(function (err,db) {//数据库连接方法</span><br><span class="line">    var cursor;</span><br><span class="line">    var dbase = db.db("kongjian");//数据库名</span><br><span class="line">    //collectionName数据表名</span><br><span class="line">    cursor= dbase.collection(collectionName,function(err,collection){</span><br><span class="line">      if(err){</span><br><span class="line">          console.log(err)</span><br><span class="line">      }else{</span><br><span class="line">          console.log(uname);</span><br><span class="line">          //uname查询的条件，对象格式</span><br><span class="line">          collection.find(uname).toArray(function(err,docs){</span><br><span class="line">            if(err){</span><br><span class="line">                console.log(err)</span><br><span class="line">            }</span><br><span class="line">            callback(null, docs);</span><br><span class="line">            db.close();</span><br><span class="line">          })</span><br><span class="line">      }</span><br><span class="line">    });</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
                 
             </div>
             <hr/>
@@ -504,7 +495,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cxqcoder.github.io/2021/08/20/express/">https://cxqcoder.github.io/2021/08/20/express/</a>
+                    <a href="https://cxqcoder.github.io/2021/08/31/vueCodeRules/">https://cxqcoder.github.io/2021/08/31/vueCodeRules/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,16 +533,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/node/">
-                                    <span class="chip bg-color">node</span>
+                                <a href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+                                    <span class="chip bg-color">代码规范</span>
                                 </a>
                             
-                                <a href="/tags/mongodb/">
-                                    <span class="chip bg-color">mongodb</span>
-                                </a>
-                            
-                                <a href="/tags/express/">
-                                    <span class="chip bg-color">express</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -860,17 +847,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/23/bomEvent/">
+                <a href="/2021/08/31/vueCodeRules/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="BOM\EVENT">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="vue代码规范">
                         
-                        <span class="card-title">BOM\EVENT</span>
+                        <span class="card-title">vue代码规范</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -880,30 +868,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" class="post-category">
+                                    代码规范
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/BOM/">
-                        <span class="chip bg-color">BOM</span>
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+                        <span class="chip bg-color">代码规范</span>
                     </a>
                     
-                    <a href="/tags/EVENT/">
-                        <span class="chip bg-color">EVENT</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -917,13 +906,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/20/mongo/">
+                <a href="/2021/08/31/codeRules/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="mongodb使用方法">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="代码规范">
                         
-                        <span class="card-title">mongodb使用方法</span>
+                        <span class="card-title">代码规范</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -934,14 +923,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" class="post-category">
+                                    代码规范
                                 </a>
                             
                             
@@ -951,12 +940,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/node/">
-                        <span class="chip bg-color">node</span>
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
+                        <span class="chip bg-color">代码规范</span>
                     </a>
                     
-                    <a href="/tags/mongodb/">
-                        <span class="chip bg-color">mongodb</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>

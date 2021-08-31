@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>vue代码规范</title>
+      <link href="/2021/08/31/vueCodeRules/"/>
+      <url>/2021/08/31/vueCodeRules/</url>
+      
+        <content type="html"><![CDATA[<h4 id="目录，文件，组件命名"><a href="#目录，文件，组件命名" class="headerlink" title="目录，文件，组件命名"></a>目录，文件，组件命名</h4><ol><li>目录统一使用短横线连接方式命名；</li><li>views下的js使用帕斯卡方式命名，其他资源文件统一使用短横线连接方式命名；</li><li>组件文件除index外使帕斯卡命名，始终是多个单词，因为引入组件时，组件的变量通常用PascalCase格式，以区别于一般变量。组件文件名与变量名一致，方便对应；</li><li>组件使用遵循短横线约定，在页面中使用需要前后闭合；</li></ol><h4 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h4><ol><li>顺序：template&nbsp;-&gt;&nbsp;script&nbsp;-&gt;&nbsp;style。一个组件尽量不要超过200行，页面包含独立部分时尽量分离成子组件。页面应该由各个小组件组成；</li><li>组件/示例的选项顺序:<br>①　name(全局引用)<br>②　components(模板依赖)<br>③　directives(自定义指令)<br>④　filters(过滤器)<br>⑤　mixins(组合)<br>⑥　props(接受到父组件的对象)<br>⑦　data(本地状态属性)<br>⑧　computed(计算)<br>⑨　watch(监听)<br>⑩　created(生命周期)<br>⑪　mounted<br>⑫　methods(方法)</li><li>router path采用短横线连接格式，其他方式会被当成一个单词搜索引擎无法区分语义</li><li>router name采用帕斯卡方式命名；</li><li>注册组件采用帕斯卡方式命名；</li><li>props在父组件使用短横线连接方式命名，接收时使用驼峰命名；prop定义时应该尽量详细，类型，默认值，校验类型</li><li>methods使用驼峰命名，操作函数动词+名词，请求数据get+**+data,尽量使用常用单词开头（set、get、go、can、has、is）</li><li>元素上多个属性时一个属性换一行</li><li>原生属性放前面，指令放后面，指令一律缩写</li><li>v-for必须加上key属性，key需要唯一，添加key可提高性能</li><li>避免v-if和v-for同时用在统一元素上（性能问题）</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码规范 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 代码规范 </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>代码规范</title>
+      <link href="/2021/08/31/codeRules/"/>
+      <url>/2021/08/31/codeRules/</url>
+      
+        <content type="html"><![CDATA[<h4 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h4><p>命名分为4类，驼峰式命名（myClass）、帕斯卡式命名（MyClass）、短横线连接（my-class）、下划线连接（my_class）;<br>目前团队全部采用驼峰命名，通用格式如下：</p><ol><li>项目命名采用下划线连接；</li><li>文件目录命名采用帕斯卡式命名；</li><li>js,css,html文件名采用下划线连接；</li><li>文件内变量,方法驼峰式命名；</li></ol><h4 id="html规范"><a href="#html规范" class="headerlink" title="html规范"></a>html规范</h4><ol><li>缩进使用 tab（2 个空格）；</li><li>嵌套的节点应该缩进；</li><li>在属性上使用双引号；</li><li>属性名使用短横线连接；</li><li>要闭合标签</li><li>规范字符编码，通过声明一个明确的字符编码，让浏览器轻松快速的确定适合网页内容的渲染方式，一般使用 <meta charset="UTF-8">；</li><li>尽可能减少标签数量；</li><li>语义化标签；</li></ol><h4 id="CSS规范"><a href="#CSS规范" class="headerlink" title="CSS规范"></a>CSS规范</h4><ol><li>缩进使用tab（两个空格）；</li><li>每个声明结束都要加分号；</li><li>注释统一用/**/；</li><li>url 的内容要用引号；</li><li>属性选择器中的属性值需要引号；</li><li>命名使用驼峰式命名；</li></ol><h4 id="JavaScript规范"><a href="#JavaScript规范" class="headerlink" title="JavaScript规范"></a>JavaScript规范</h4><ol><li>缩进使用tab（2个空格）；</li><li>变量使用驼峰式命名，优先使用let和const声明；</li><li>常量全部使用大写，用下划线链接；</li><li>构造函数采用帕斯卡命名；</li><li>单行长度不超过100，超过需要换行；</li><li>统一加分号；</li></ol><h5 id="空格的使用"><a href="#空格的使用" class="headerlink" title="空格的使用"></a>空格的使用</h5><ol><li>三元运算符？的前后，=号前后；</li><li>逗号后；</li><li>代码块‘{’前</li><li>下列关键词前：else,while,catch.finally</li><li>下列关键字后：if,else,for,while,do,switch,case,try,catch,finally,with,return,typeof</li><li>单行注释‘//’后，如果单行注释和代码同行，则前面也需要，多行注释‘*’后</li><li>对象的属性值前</li><li>for循环，分号号留有一个空格，前置条件如果有多个，逗号后留一个空格</li><li>无论是函数声明还是函数表达式，‘{’前一定要有空格</li><li>函数的参数之间</li></ol><h5 id="空行的使用"><a href="#空行的使用" class="headerlink" title="空行的使用"></a>空行的使用</h5><ol><li>变量声明后（当变量声明在代码块的最后一行时，则不需要空行）</li><li>注释前（当注释在代码块的第一行时，则无需空行）</li><li>定义函数前（vue不需要）</li><li>文件最后保留一个空行</li></ol><h5 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h5><ol><li>代码块“{”后 和“}”前</li><li>变量赋值后</li></ol><h5 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h5><p>最外层统一使用单引号，除非字符串嵌套的情况使用双引号</p><h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><ol><li>多行注释用在难于理解，可能存在错误，业务逻辑强相关的代码块</li><li>函数注释，复杂的函数，所有的类都必须进行函数注释，函数注释使用同一规范，例如<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/** </span><br><span class="line">* @description 函数描述的 必填</span><br><span class="line">* @param id {Number} 传入需要获取名称的人物id 参数必填</span><br><span class="line">* @return {String} 返回的姓名 返回值必填，空为void </span><br><span class="line">* @author shi 2015/07/21 作者可选 </span><br><span class="line">* @version 1.1.0 可以不写 版本可选 </span><br><span class="line">* @example 示例代码，可选 </span><br><span class="line">*/ </span><br><span class="line">function getTaskName(id) { </span><br><span class="line">let name = "test"; return name;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></li></ol><h5 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h5><ol><li>对象属性名不需要加引号，如对象属性名是中划线命名的需要加引号；</li><li>对象以缩进的形式书写，不能写在一行，单个属性可以写在一行，es6导入方法时可以使用单行；</li><li>数组、对象最后不要有逗号；</li></ol><h5 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h5><ol><li>下列关键字后必须有大括号(即使代码块的内容有一行)：if，else,for,while,do,switch,try,catch,finally,with;</li></ol><h5 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h5><p>永远不要直接使用&nbsp;undefined&nbsp;进行变量判断；使用typeof和字符串’undefined’对变量进行判断。</p><h5 id="最多三层嵌套的条件判断和循环"><a href="#最多三层嵌套的条件判断和循环" class="headerlink" title="最多三层嵌套的条件判断和循环"></a>最多三层嵌套的条件判断和循环</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码规范 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 代码规范 </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端设计规范-按钮</title>
+      <link href="/2021/08/31/webDedignRule/"/>
+      <url>/2021/08/31/webDedignRule/</url>
+      
+        <content type="html"><![CDATA[<h4 id="按钮基本信息"><a href="#按钮基本信息" class="headerlink" title="按钮基本信息"></a>按钮基本信息</h4><p> 基础按钮由两部分组成：载体、文本/图标。<br> <img src="/medias/designRules/img01.png" width="50%"></p><h5 id="按钮类型"><a href="#按钮类型" class="headerlink" title="按钮类型"></a>按钮类型</h5><ol><li>主按钮:用于主要功能的，一个操作区域有且只能有一个主按钮；</li><li>默认按钮:操作区域内有主次之分的一组行动点；</li><li>虚线按钮：常用于添加操作；</li><li>文本按钮：用于次要功能的；</li><li>链接按钮:用于外链功能。<img src="/medias/designRules/img02.png" width="50%"></li></ol><h5 id="按钮状态"><a href="#按钮状态" class="headerlink" title="按钮状态"></a>按钮状态</h5><p>正常状态、悬浮状态、点击状态、禁用状态<br>PS:禁用状态下<br>（1）无论按钮本身颜色是什么，它的背景色均为纯灰色，常用的色值有：#CCC、#999等，此种方案为常用方案。<br>（2）Disable 状态为 Normal 状态的 30% 透明度，如果你想让按钮都有颜色倾向的话，可以用这种方案。<br><img src="/medias/designRules/img03.png" width="50%"></p><h5 id="状态属性"><a href="#状态属性" class="headerlink" title="状态属性"></a>状态属性</h5><ol><li>常规：常规样式的按钮，主操作按钮；</li><li>危险：删除/移动/修改权限等危险操作，一般需要二次确认；</li><li>幽灵：用于背景色比较复杂的地方，常用在首页/产品页等展示场景;</li><li>加载：用于异步操作等待反馈的时候，可以避免多次提交。<img src="/medias/designRules/img04.png" width="50%"></li></ol><h5 id="按钮使用规范"><a href="#按钮使用规范" class="headerlink" title="按钮使用规范"></a>按钮使用规范</h5><ol><li>圆角值：为0适合严谨风格，小圆角最常用，较大圆角不建议用，超圆角（50%）适当使用；</li><li>文字：精简，与按钮大小比例适中，基本12px，14px;</li><li>弥散阴影:只有主按钮能用阴影，让按钮有呼吸感;</li><li>其他：主次样式统一，提交，弹窗主按钮在右边，其他页面按情况设计。<br>PS:按钮尺寸,<br>高 = 文字行高 + Xn，X=自然数，n=4<br>宽 = 文字宽度 +  Xn，X=自然数，n=4</li></ol><h5 id="按钮设计细节"><a href="#按钮设计细节" class="headerlink" title="按钮设计细节"></a>按钮设计细节</h5><ol><li>超大：高40px，最小宽度128px，,左右边距20px，字体16px，圆角4px;</li><li>大：高36px，最小宽度112px，左右边距16px，字体14px,圆角4px;</li><li>默认：高32px，最小宽度96px，左右边距16px，字体14p,圆角4px;</li><li>小：高28px，最小宽度80px，左右边距12px，字体12px,圆角4px;</li><li>超小：高24px，最小宽度64px，左右边距12p，字体12p,圆角4px;</li><li>文字加图标，图标那一侧，padding减2px；图标与文字相隔6px;</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计规范 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ps基础</title>
       <link href="/2021/08/24/ps/"/>
       <url>/2021/08/24/ps/</url>
@@ -85,11 +166,11 @@
     
     
     <entry>
-      <title>mongodb可视化</title>
-      <link href="/2021/08/20/mongoDBView/"/>
-      <url>/2021/08/20/mongoDBView/</url>
+      <title>mongodb使用方法</title>
+      <link href="/2021/08/20/mongo/"/>
+      <url>/2021/08/20/mongo/</url>
       
-        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装robo-3t"><a href="#安装robo-3t" class="headerlink" title="安装robo 3t"></a>安装robo 3t</h4><ol><li><p>在<a href="https://robomongo.org/">官网下载</a>自己需要的版本，然后选择安装</p><img src="/medias/articImg/20.png" width="50%"><img src="/medias/articImg/21.png" width="50%"></li><li><p>点击file 右键选择connection </p><img src="/medias/articImg/22.png" width="50%"><img src="/medias/articImg/23.png" width="50%"></li><li><p>创建数据库</p><img src="/medias/articImg/24.png" width="50%"><img src="/medias/articImg/25.png" width="50%"></li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h4><ol><li><p>在<a href="https://www.mongodb.com/try/download/community">官网下载</a>自己需要的版本，然后选择 custom自定义安装</p><img src="/medias/articImg/01.png" width="50%"><img src="/medias/articImg/04.png" width="50%"><img src="/medias/articImg/02.png" width="50%"><img src="/medias/articImg/03.png" width="50%"></li><li><p>在D盘中创建一个文件夹mongoData，mongoData里面在创建文件夹database,文件夹database创建data和log两个文件夹，分别存放数据库和日志</p><img src="/medias/articImg/05.png" width="50%"></li><li><p>在安装的MongoDB文件根目录下创建mongodb.config文件</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath = D:\mongoData\database\data</span><br><span class="line">logpath = D:\mongoData\database\log\mongodb.log</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/06.png" width="50%"></li><li><p>cmd命令行以管理员权限打开，切换到MongoDB的bin目录下，然后输入<br> mongod –dbpath D:\mongoData\database\data</p> <img src="/medias/articImg/07.png" width="50%"> 浏览器输入：localhost:27017,进行访问  <img src="/medias/articImg/08.png" width="50%"></li><li><p>打开新的命令窗口，切换至bin路径下，输入下边命令，路径改为自己的config文件路径，后边的mongodb为服务名<br>mongod –config “D:\MongoDB\mongo.config” -install -serviceName “mongodb”</p><img src="/medias/articImg/09.png" width="50%"></li><li><p>打开新的命令窗口，输入命令：net start mongodb</p><img src="/medias/articImg/10.png" width="50%"></li><li><p>快捷启动，在bin的文件下创建一个.bat文件，每次需要启动时点击一下bat,运行完就好了</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start mongod --dbpath D:\MongoDB\data</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/11.png" width="50%"></li><li><p>环境变量</p><img src="/medias/articImg/13.png" width="50%"></li><li><p>注意问题：安装过程中发生服务特定错误100，再重启计算机<br>解决办法</p><img src="/medias/articImg/12.png" width="50%"></li></ol>]]></content>
       
       
       <categories>
@@ -112,11 +193,11 @@
     
     
     <entry>
-      <title>mongodb使用方法</title>
-      <link href="/2021/08/20/mongo/"/>
-      <url>/2021/08/20/mongo/</url>
+      <title>mongodb可视化</title>
+      <link href="/2021/08/20/mongoDBView/"/>
+      <url>/2021/08/20/mongoDBView/</url>
       
-        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h4><ol><li><p>在<a href="https://www.mongodb.com/try/download/community">官网下载</a>自己需要的版本，然后选择 custom自定义安装</p><img src="/medias/articImg/01.png" width="50%"><img src="/medias/articImg/04.png" width="50%"><img src="/medias/articImg/02.png" width="50%"><img src="/medias/articImg/03.png" width="50%"></li><li><p>在D盘中创建一个文件夹mongoData，mongoData里面在创建文件夹database,文件夹database创建data和log两个文件夹，分别存放数据库和日志</p><img src="/medias/articImg/05.png" width="50%"></li><li><p>在安装的MongoDB文件根目录下创建mongodb.config文件</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath = D:\mongoData\database\data</span><br><span class="line">logpath = D:\mongoData\database\log\mongodb.log</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/06.png" width="50%"></li><li><p>cmd命令行以管理员权限打开，切换到MongoDB的bin目录下，然后输入<br> mongod –dbpath D:\mongoData\database\data</p> <img src="/medias/articImg/07.png" width="50%"> 浏览器输入：localhost:27017,进行访问  <img src="/medias/articImg/08.png" width="50%"></li><li><p>打开新的命令窗口，切换至bin路径下，输入下边命令，路径改为自己的config文件路径，后边的mongodb为服务名<br>mongod –config “D:\MongoDB\mongo.config” -install -serviceName “mongodb”</p><img src="/medias/articImg/09.png" width="50%"></li><li><p>打开新的命令窗口，输入命令：net start mongodb</p><img src="/medias/articImg/10.png" width="50%"></li><li><p>快捷启动，在bin的文件下创建一个.bat文件，每次需要启动时点击一下bat,运行完就好了</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start mongod --dbpath D:\MongoDB\data</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/11.png" width="50%"></li><li><p>环境变量</p><img src="/medias/articImg/13.png" width="50%"></li><li><p>注意问题：安装过程中发生服务特定错误100，再重启计算机<br>解决办法</p><img src="/medias/articImg/12.png" width="50%"></li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装robo-3t"><a href="#安装robo-3t" class="headerlink" title="安装robo 3t"></a>安装robo 3t</h4><ol><li><p>在<a href="https://robomongo.org/">官网下载</a>自己需要的版本，然后选择安装</p><img src="/medias/articImg/20.png" width="50%"><img src="/medias/articImg/21.png" width="50%"></li><li><p>点击file 右键选择connection </p><img src="/medias/articImg/22.png" width="50%"><img src="/medias/articImg/23.png" width="50%"></li><li><p>创建数据库</p><img src="/medias/articImg/24.png" width="50%"><img src="/medias/articImg/25.png" width="50%"></li></ol>]]></content>
       
       
       <categories>
