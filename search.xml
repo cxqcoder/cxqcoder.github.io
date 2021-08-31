@@ -85,11 +85,11 @@
     
     
     <entry>
-      <title>mongodb使用方法</title>
-      <link href="/2021/08/20/mongo/"/>
-      <url>/2021/08/20/mongo/</url>
+      <title>mongodb可视化</title>
+      <link href="/2021/08/20/mongoDBView/"/>
+      <url>/2021/08/20/mongoDBView/</url>
       
-        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h4><ol><li><p>在<a href="https://www.mongodb.com/try/download/community">官网下载</a>自己需要的版本，然后选择 custom自定义安装</p><img src="/medias/articImg/01.png" width="50%"><img src="/medias/articImg/04.png" width="50%"><img src="/medias/articImg/02.png" width="50%"><img src="/medias/articImg/03.png" width="50%"></li><li><p>在D盘中创建一个文件夹mongoData，mongoData里面在创建文件夹database,文件夹database创建data和log两个文件夹，分别存放数据库和日志</p><img src="/medias/articImg/05.png" width="50%"></li><li><p>在安装的MongoDB文件根目录下创建mongodb.config文件</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath = D:\mongoData\database\data</span><br><span class="line">logpath = D:\mongoData\database\log\mongodb.log</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/06.png" width="50%"></li><li><p>cmd命令行以管理员权限打开，切换到MongoDB的bin目录下，然后输入<br> mongod –dbpath D:\mongoData\database\data</p> <img src="/medias/articImg/07.png" width="50%"> 浏览器输入：localhost:27017,进行访问  <img src="/medias/articImg/08.png" width="50%"></li><li><p>打开新的命令窗口，切换至bin路径下，输入下边命令，路径改为自己的config文件路径，后边的mongodb为服务名<br>mongod –config “D:\MongoDB\mongo.config” -install -serviceName “mongodb”</p><img src="/medias/articImg/09.png" width="50%"></li><li><p>打开新的命令窗口，输入命令：net start mongodb</p><img src="/medias/articImg/10.png" width="50%"></li><li><p>快捷启动，在bin的文件下创建一个.bat文件，每次需要启动时点击一下bat,运行完就好了</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start mongod --dbpath D:\MongoDB\data</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/11.png" width="50%"></li><li><p>环境变量</p><img src="/medias/articImg/13.png" width="50%"></li><li><p>注意问题：安装过程中发生服务特定错误100，再重启计算机<br>解决办法</p><img src="/medias/articImg/12.png" width="50%"></li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装robo-3t"><a href="#安装robo-3t" class="headerlink" title="安装robo 3t"></a>安装robo 3t</h4><ol><li><p>在<a href="https://robomongo.org/">官网下载</a>自己需要的版本，然后选择安装</p><img src="/medias/articImg/20.png" width="50%"><img src="/medias/articImg/21.png" width="50%"></li><li><p>点击file 右键选择connection </p><img src="/medias/articImg/22.png" width="50%"><img src="/medias/articImg/23.png" width="50%"></li><li><p>创建数据库</p><img src="/medias/articImg/24.png" width="50%"><img src="/medias/articImg/25.png" width="50%"></li></ol>]]></content>
       
       
       <categories>
@@ -112,11 +112,11 @@
     
     
     <entry>
-      <title>mongodb可视化</title>
-      <link href="/2021/08/20/mongoDBView/"/>
-      <url>/2021/08/20/mongoDBView/</url>
+      <title>mongodb使用方法</title>
+      <link href="/2021/08/20/mongo/"/>
+      <url>/2021/08/20/mongo/</url>
       
-        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装robo-3t"><a href="#安装robo-3t" class="headerlink" title="安装robo 3t"></a>安装robo 3t</h4><ol><li><p>在<a href="https://robomongo.org/">官网下载</a>自己需要的版本，然后选择安装</p><img src="/medias/articImg/20.png" width="50%"><img src="/medias/articImg/21.png" width="50%"></li><li><p>点击file 右键选择connection </p><img src="/medias/articImg/22.png" width="50%"><img src="/medias/articImg/23.png" width="50%"></li><li><p>创建数据库</p><img src="/medias/articImg/24.png" width="50%"><img src="/medias/articImg/25.png" width="50%"></li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h4><ol><li><p>在<a href="https://www.mongodb.com/try/download/community">官网下载</a>自己需要的版本，然后选择 custom自定义安装</p><img src="/medias/articImg/01.png" width="50%"><img src="/medias/articImg/04.png" width="50%"><img src="/medias/articImg/02.png" width="50%"><img src="/medias/articImg/03.png" width="50%"></li><li><p>在D盘中创建一个文件夹mongoData，mongoData里面在创建文件夹database,文件夹database创建data和log两个文件夹，分别存放数据库和日志</p><img src="/medias/articImg/05.png" width="50%"></li><li><p>在安装的MongoDB文件根目录下创建mongodb.config文件</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath = D:\mongoData\database\data</span><br><span class="line">logpath = D:\mongoData\database\log\mongodb.log</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/06.png" width="50%"></li><li><p>cmd命令行以管理员权限打开，切换到MongoDB的bin目录下，然后输入<br> mongod –dbpath D:\mongoData\database\data</p> <img src="/medias/articImg/07.png" width="50%"> 浏览器输入：localhost:27017,进行访问  <img src="/medias/articImg/08.png" width="50%"></li><li><p>打开新的命令窗口，切换至bin路径下，输入下边命令，路径改为自己的config文件路径，后边的mongodb为服务名<br>mongod –config “D:\MongoDB\mongo.config” -install -serviceName “mongodb”</p><img src="/medias/articImg/09.png" width="50%"></li><li><p>打开新的命令窗口，输入命令：net start mongodb</p><img src="/medias/articImg/10.png" width="50%"></li><li><p>快捷启动，在bin的文件下创建一个.bat文件，每次需要启动时点击一下bat,运行完就好了</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start mongod --dbpath D:\MongoDB\data</span><br></pre></td></tr></tbody></table></figure><img src="/medias/articImg/11.png" width="50%"></li><li><p>环境变量</p><img src="/medias/articImg/13.png" width="50%"></li><li><p>注意问题：安装过程中发生服务特定错误100，再重启计算机<br>解决办法</p><img src="/medias/articImg/12.png" width="50%"></li></ol>]]></content>
       
       
       <categories>
