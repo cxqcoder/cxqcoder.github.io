@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: node, 桃初">
+    <meta name="keywords" content="标签: node, 采采其芹">
     <meta name="description" content="未来很明朗，好运在路上">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: node | 桃初</title>
+    <title>标签: node | 采采其芹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -46,7 +46,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">桃初</span>
+                    <span class="logo-span">采采其芹</span>
                 </a>
             </div>
             
@@ -61,6 +61,17 @@
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
     </a>
     
   </li>
@@ -112,7 +123,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">桃初</div>
+        <div class="logo-name">采采其芹</div>
         <div class="logo-desc">
             
             未来很明朗，好运在路上
@@ -131,6 +142,17 @@
 			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
 		</a>
           
         </li>
@@ -250,7 +272,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                北窗一枕
+                思乐泮水，薄采其芹
                 
             </div>
 
@@ -285,10 +307,19 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91/" title="关于我: 1">
+                <a href="/tags/BOM/" title="BOM: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="关于我" style="background-color: #F9EBEA;">关于我
+                            data-tagname="BOM" style="background-color: #F9EBEA;">BOM
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/EVENT/" title="EVENT: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="EVENT" style="background-color: #F5EEF8;">EVENT
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -297,7 +328,7 @@
                 <a href="/tags/node/" title="node: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="node" style="background-color: #F5EEF8;">node
+                            data-tagname="node" style="background-color: #D5F5E3;">node
                         <span class="tag-length">3</span>
                     </span>
                 </a>
@@ -306,7 +337,7 @@
                 <a href="/tags/mongodb/" title="mongodb: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="mongodb" style="background-color: #D5F5E3;">mongodb
+                            data-tagname="mongodb" style="background-color: #E8F8F5;">mongodb
                         <span class="tag-length">3</span>
                     </span>
                 </a>
@@ -315,7 +346,16 @@
                 <a href="/tags/express/" title="express: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="express" style="background-color: #E8F8F5;">express
+                            data-tagname="express" style="background-color: #FEF9E7;">express
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/ps%E5%9F%BA%E7%A1%80/" title="ps基础: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="ps基础" style="background-color: #F8F9F9;">ps基础
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -618,18 +658,12 @@ $(function () {
                             var content = data.content.trim().replace(/<[^>]+>/g, "");
                             if (first_occur >= 0) {
                                 // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
+                                var start = 0;
+                                var end = 90;
                                 if (end > content.length) {
                                     end = content.length;
                                 }
-                                var match_content = content.substr(start, end);
+                                var match_content = content.substr(0, end);
                                 // highlight all keywords
                                 keywords.forEach(function (keyword) {
                                     var regS = new RegExp(keyword, "gi");
