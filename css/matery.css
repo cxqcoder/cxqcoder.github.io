@@ -1841,9 +1841,11 @@ footer .social-statis {
 }
 
 footer a {
+    color: #666;
+}
+footer a:hover{
     color: #fff;
 }
-
 footer .copy-right {
     color: #dbdbdb;
 }

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 采采其芹">
+    <meta name="keywords" content="归档: 2021, 采采其芹">
     <meta name="description" content="未来很明朗，好运在路上">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | 采采其芹</title>
+    <title>归档: 2021 | 采采其芹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -265,13 +265,7 @@
 
 </header>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-<link rel="stylesheet" type="text/css" href="/css/barrager.css">
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.barrager.js"></script>
-
-<div class="bg-cover pd-header about-cover">
+    <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -300,186 +294,59 @@
     </div>
 </div>
 
-<style>
-    #send{
-        margin-bottom: 10px;
-        width: 200px;
-        background-color: #0ba360;
-    }
-    #clear{
-        margin-bottom: 10px;
-        width: 200px;
-        background-color: #F7A300;
-    }
-    p{
-        text-align: center;
-    }
-</style>
 <main class="content">
-    <div id="contact" class="container chip-container">
-      <!--valine评论弹幕-->
-      
-        <div class="card">
-          <div class="card-content">
-            <div class="tag-title center-align">
-              留言板
-            </div>
-          </div>
-          <div class="container">
-            <section id="custom" class="bb-section">
-              <div class="row">
-                <div class="col-md-5">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      留言
-                      <input 
-                        class="form-control" 
-                        name="info" 
-                        type="text" 
-                        placeholder="如果没遇上那么多转弯,怎么来到你身旁"/>
-                    </div>
-                    <!-- <div class="form-group">
-                      链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
-                    </div>
-                    <div class="form-group">
-                      速度：<input  class="form-control"  name="speed" type="text" placeholder="5~20" value="16" />
-                    </div> -->
-                  </form>
-                  <div class="form-group" style="text-align: right;">
-                    <button id="send"  class="btn" onclick="run()">留言</button>
-                    <!-- <button id="clear" class="btn " onclick="clear_barrage()"> 清除</button> -->
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="card" style="overflow: hidden;">
-          <div id="contactList"></div>
-          <div id="totalLists"></div>
-        </div>
-        <script type="text/javascript">
-          AV.init({
-            appId: 'NoItv0iyrU4C3pEhrXz7LCbe-gzGzoHsz',
-            appKey: 'zgo8fVh4ncss3fVOVTY0n1jX'
-          });
-          $(function() {
-            do_barrager();
-          });
-          async function do_barrager() {
-            $("#contactList").html('');
-            $("#totalLists").html('');
-            let lists = [];
-            //查询弹幕
-            const query = new AV.Query('barrager');
-            const barrager = await query.find().then((barrager) => {
-              lists = barrager;
-            })
-            for(var i=0;i<lists.length;i++){
-              let item = lists[i];
-              let obj = eval('(' + JSON.stringify(item) + ')');
-              var date = dateFormat(obj.createdAt,'yyyy-MM-dd hh:mm:ss')
-              var str= `
-                <div class="listItem">
-                  <div class="listAvatar">${obj.info.substr(0,1)}</div>
-                  <div class="listContent">
-                    <div class="listText">${obj.info}</div>
-                    <div class="listDate">${date}</div>
-                  </div>
-                </div>
-              `;
-              $("#contactList").append(str);
-            }
-            $("#totalLists").append(`总共${lists.length}条留言`);
-              // const timer = setInterval(() => {
-              //     if (index === length) {
-              //         clearInterval(timer);
-              //         do_barrager()
-              //     } else {
-              //         let obj = lists[index]
-              //         let jsonObject = eval('(' + JSON.stringify(obj) + ')');
-              //         $('body').barrager({
-              //             'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
-              //             'href': jsonObject.href,
-              //             'info': jsonObject.info,
-              //             'speed': jsonObject.speed
-              //         });
-              //         index++;
-              //     }
-              // }, 500)
-          }
-          function dateFormat(time,fmt) {
-            let ret;
-            let date = new Date(time);
-            const opt = {
-              "y+": date.getFullYear().toString(),        // 年
-              "M+": (date.getMonth() + 1).toString(),     // 月
-              "d+": date.getDate().toString(),            // 日
-              "h+": date.getHours().toString(),           // 时
-              "m+": date.getMinutes().toString(),         // 分
-              "s+": date.getSeconds().toString()          // 秒
-              // 有其他格式化字符需求可以继续添加，必须转化成字符串
-            };
-            for (let k in opt) {
-                ret = new RegExp("(" + k + ")").exec(fmt);
-                if (ret) {
-                    fmt = fmt.replace(ret[1], (ret[1].length == 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, "0")))
-                };
-            };
-            return fmt;
-        }
-          //发送弹幕
-          function  run(){
-            let info = $('input[name=info]').val();
-            if(info==''){
-              info = '你好';
-            }
-            // let href = $('input[name=href]').val();
-            // (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
-            // let speed = parseInt($('input[name=speed]').val());
-            // if(speed > 20 || speed < 5)
-            //     speed = Math.floor(Math.random() * 10) + 5;
-            const Barrager = AV.Object.extend('barrager');
-            const barrager = new Barrager();
-            barrager.set('href', '');
-            barrager.set('info', info);
-            barrager.set('speed', 16);
-            barrager.save().then((todo) => {
-              do_barrager();
-              $(" input[ name='info' ] ").val("");
-              $(" input[ name='href' ] ").val("");
-              $(" input[ name='speed' ] ").val("");
-            
-            });
-          }
-          function  clear_barrage(){
-            $(" input[ name='info' ] ").val("");
-            $(" input[ name='href' ] ").val("");
-            $(" input[ name='speed' ] ").val("");
-          }
-        </script>
+
+    
+
+    
+    <div class="container nopadding-x-md" id="arcticWrap">
+        <h4>共1篇文章</h4>
         
-   
-
-        <!--其他评论card-->
-        <!-- <div class="card">
             
-
+              
+              
+              <h5>
+                2021年
+              </h5>
             
-
+            <div class="pageItem">
+              <a href="/2021/08/20/mongoDBView/">
+                <div class="pageTitle">1.mongodb可视化</div>
+                <div class="pageDate">2021-08-20</div>
+              </a>
+            </div>
+        
+        
+          <!-- <div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
             
-
+            <a href="/archives/2021/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
             
-
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">2 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
             
-
+            <a class="right btn-floating btn-large disabled">
+                <i class="fas fa-angle-right"></i>
+            </a>
             
-
-            
-
-        </div> -->
+        </div>
+    </div>
+</div> -->
+<div class="paginator">
+    <a class="extend prev" rel="prev" href="/archives/2021/"><i class="fa fa-chevron-left"></i></a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span>
+</div>
+        
+          
     </div>
 </main>
+
 
 
     <footer class="page-footer bg-color" style="position: relative;height: 66px;">

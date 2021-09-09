@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo 部署到阿里云服务器</title>
+      <link href="/2021/09/01/servce/"/>
+      <url>/2021/09/01/servce/</url>
+      
+        <content type="html"><![CDATA[<h5 id="阿里云服务器"><a href="#阿里云服务器" class="headerlink" title="阿里云服务器"></a>阿里云服务器</h5><p> windows版本</p><h5 id="服务器环境准备"><a href="#服务器环境准备" class="headerlink" title="服务器环境准备"></a>服务器环境准备</h5><ol><li>安装node.js</li><li>下载nginx,安装好以后，cd 进入nginx文件夹后 start nginx </li><li>启动成功后可以在 <a href="http://localhost:8080/">http://localhost:8080/</a>  中看到启动成功后的界面</li><li>将静态资源放在 nginx下html文件夹下，</li><li>nginx.config配置<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">server {</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  xxxxx.com;//域名</span><br><span class="line"></span><br><span class="line">    #charset koi8-r;</span><br><span class="line"></span><br><span class="line">    #access_log  logs/host.access.log  main;</span><br><span class="line">    location / {</span><br><span class="line">        proxy_pass http://127.0.0.1:9080;//转发端口</span><br><span class="line">        root   html;//资源路径</span><br><span class="line">        index   index.html index.htm;//首页</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></li><li>浏览器里面输入<a href="http://localhost/">http://localhost/</a> 或者 域名就可以访问</li><li>其他主机访问上面地址不能访问，原因之一:域名dns没有解析<br>阿里云控制台 域名<img src="/medias/designRules/img11.png" width="50%"><img src="/medias/designRules/img12.png" width="50%"></li><li>输入域名后出现iss windows server<br>你的nginx中server是80端口，而你的iis也是80端口，80的端口被占用了<br>停止iis服务，重启nginx</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文章 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue代码规范</title>
       <link href="/2021/08/31/vueCodeRules/"/>
       <url>/2021/08/31/vueCodeRules/</url>
